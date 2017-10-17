@@ -6,4 +6,5 @@
   <strong>Song Genre: </strong><li><%= @song.genre %></li>
 </ul>
 
-<%= button_to 'Delete', @song, method: :delete, data: { confirm: 'Delete For Sureeeeee??' } %>
+<%= form_tag song_path(@song), method: "delete" %>
+ <%= submit_tag "Delete #{@song.title}" %>
